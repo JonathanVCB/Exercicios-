@@ -1,3 +1,8 @@
+/*
+Tabela de notas - Você foi contratado ou contratada 
+por uma escola pra fazer o sistema de boletim dos alunos. 
+Como primeiro passo, escreva um programa que produza a seguinte saída:
+*/
 const prompt = require("prompt-sync")();
 
 const aluno1 = prompt("Digite o nome do aluno (a): ");
