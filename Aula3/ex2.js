@@ -15,12 +15,12 @@ const nota4 = parseFloat(+prompt("Digite a quarta nota: "));
 
 const resultado = (nota1 + nota2 + nota3 + nota4) / 4;
 
-if (resultado >= 7 && resultado <= 10) {
-  console.log("Aprovado");
-} else if (resultado >= 5 && resultado <= 6.9) {
-  console.log("Em recuperação");
-} else if (resultado < 4.9) {
-  console.log("Reprovado");
-} else {
+if (resultado < 1 || resultado > 10) {
   console.log("INVALIDO");
+} else if (resultado >= 7) {
+  console.log("Aprovado");
+} else if (resultado >= 5) {
+  console.log("Em recuperação");
+} else {
+  console.log("Reprovado");
 }

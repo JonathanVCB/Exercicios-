@@ -12,23 +12,24 @@ Se apenas dois dos lados forem iguais, apresente a mensagem: TRIANGULO ISOSCELES
 */
 const prompt = require("prompt-sync")();
 
-const ladoA = +prompt("Digite o valor o maior número: ");
-const ladoB = +prompt("Digite o valor o segundo maior número: ");
-const ladoC = +prompt("Digite o valor o menor número: ");
-const Aquad = ladoA * ladoA;
-const Bquad = ladoB * ladoB;
-const Cquad = ladoC * ladoC;
+const ladoA = +prompt("Digite o valor do maior número: ");
+const ladoB = +prompt("Digite o valord do segundo maior número: ");
+const ladoC = +prompt("Digite o valor do menor número: ");
 
 if (ladoA >= ladoB + ladoC) {
   console.log("NAO FORMA TRIANGULO");
-} else if (Aquad === Bquad + Cquad) {
-  console.log("TRIANGULO RETANGULO");
-} else if (Aquad > Bquad + Cquad) {
-  console.log("TRIANGULO OBTUSANGULO");
-} else if (Aquad < Bquad + Cquad) {
-  console.log("TRIANGULO ACUTANGULO");
-} else if ((ladoA === ladoB) === ladoC) {
-  console.log("TRIANFULO EQUILATERO");
+} else if (ladoA === ladoB && ladoC === ladoA) {
+  console.log("TRIANGULO EQUILATERO E ACUTANGULO");
 } else if (ladoA === ladoB || ladoA === ladoC || ladoB === ladoC) {
   console.log("TRIANGULO ISOSCELES");
+}
+
+if (ladoA >= ladoB + ladoC) {
+  console.log();
+} else if (ladoA ** 2 === ladoB ** 2 + ladoC ** 2) {
+  console.log("TRIANGULO RETANGULO");
+} else if (ladoA ** 2 > ladoB ** 2 + ladoC ** 2) {
+  console.log("TRIANGULO OBTUSANGULO");
+} else if (ladoA ** 2 < ladoB ** 2 + ladoC ** 2) {
+  console.log("TRIANGULO ACUTANGULO");
 }
